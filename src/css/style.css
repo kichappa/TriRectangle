@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Lato:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body,
+.App,
+#root {
+    height: 100%;
+    padding: 0px;
+    overflow: hidden;
+    margin: 0;
+    background: #cfcfcf;
+}
+
+.App {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    height: -webkit-fill-available;
+    min-height: -moz-available;
+}
+
+#outerContainer {
+    height: 100%;
+    width: calc(100vw - 40px);
+    /* height: -webkit-fill-available; */
+    /* top:-50px; */
+    /* margin: 20px; */
+    position: relative;
+
+    box-shadow: -6px -6px 8px #f0f0f0, 6px 6px 8px rgba(121, 123, 129, 0.5),
+        inset 4px 4px 15px rgba(14, 17, 16, 0.5),
+        inset -4px -4px 15px rgba(94, 94, 94, 0.5);
+    border-radius: 20px;
+    background: #252525;
+}

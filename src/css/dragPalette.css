@@ -1,0 +1,100 @@
+#vertPalette,
+#gradientPalette {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  touch-action: none;
+  border-radius: 20px;
+  touch-action: none;
+}
+
+.vertex {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  z-index: 1;
+  touch-action: none;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  touch-action: none;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.39, 0.58, 0.57, 1),
+    background-color 0.3s cubic-bezier(1, -0.01, 0.95, -0.11);
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.vertIWeight {
+  box-sizing: border-box;
+  z-index: 1;
+  touch-action: none;
+  background-color: #ffffff80;
+  border-radius: 50%;
+  user-select: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.vertColor {
+  box-sizing: border-box;
+  z-index: 1;
+  touch-action: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+  user-select: none;
+  position: absolute;
+  box-shadow: 0px 0px 4px rgba(53, 53, 53, 0.5);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.vertColor:active {
+  box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .vertex:hover {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-width: 8px;
+  }
+}
+
+.vertex.active {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-width: 8px;
+  box-shadow: 0px 0px 4px rgba(53, 53, 53, 0.5);
+}
+
+.vertexactive {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-width: 8px;
+}
+
+.vertIContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.vertIContainer .sketch-picker {
+  transform: translate(calc(-50% + 18px), +10px);
+  z-index: 3;
+}

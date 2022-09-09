@@ -1,0 +1,122 @@
+#point-manager {
+    z-index: 0;
+    position: absolute;
+    top: calc(0% + 20px);
+    right: calc(0% + 20px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+
+    overflow: hidden;
+    touch-action: none;
+}
+#undo {
+    bottom: calc(0% + 20px);
+    left: calc(0% + 20px);
+}
+#redo {
+    bottom: calc(0% + 20px);
+    right: calc(0% + 20px);
+}
+
+.undo-redo {
+    padding: 10px;
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+
+    transition: all 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+    overflow: hidden;
+    touch-action: none;
+}
+
+#point-manager button {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    color: rgb(211, 211, 211);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    background: #252525;
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6),
+        -2px -2px 8px rgba(133, 129, 129, 0.5),
+        inset -3px -3px 4px rgba(19, 20, 20, 0.5),
+        inset 2px 2px 4px rgba(106, 107, 109, 0.5);
+
+    border: none;
+    border-radius: 6px;
+    padding: 0 10px 0 10px;
+}
+
+.undo-redo button {
+    height: 40px;
+    width: 40px;
+
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    background-color: #0000001c;
+    border: 2px solid #ffffff98;
+    border-radius: 6px;
+    padding: 0 10px 0 10px;
+}
+
+.hideButton.hidden {
+    opacity: 0%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #point-manager button:hover {
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6),
+            -2px -2px 8px rgba(133, 129, 129, 0.5),
+            inset -1px -1px 4px rgba(19, 20, 20, 0.5),
+            inset 1px 1px 4px rgba(106, 107, 109, 0.5);
+    }
+    #point-manager button:active {
+        box-shadow: 2px 2px 8px rgba(11, 11, 11, 0.6),
+            -2px -2px 8px rgba(101, 101, 101, 0.5),
+            inset 6px 6px 10px rgba(28, 29, 29, 0.5),
+            inset -5px -5px 10px rgba(45, 45, 47, 0.5);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #point-manager button:active {
+        box-shadow: 2px 2px 8px rgba(11, 11, 11, 0.6),
+            -2px -2px 8px rgba(101, 101, 101, 0.5),
+            inset 6px 6px 10px rgba(28, 29, 29, 0.5),
+            inset -5px -5px 10px rgba(45, 45, 47, 0.5);
+    }
+}
